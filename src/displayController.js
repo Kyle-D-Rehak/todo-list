@@ -84,7 +84,7 @@ export const DisplayController = (() => {
             remove.addEventListener('click', () => {
                 const id = task.id;
                 StorageInterface.removeTask(id, project);
-                remove.parentElement.remove();
+                document.getElementById(task.id).remove();
             })
 
             if (task.completed) {
